@@ -10,6 +10,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/otp', otpRoutes);
 
+app.get('/', (req, res) => {
+  res.send('OK');
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, (err?: Error) => {
